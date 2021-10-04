@@ -1,6 +1,6 @@
 import React from 'react'
 import CloseIcon from '@material-ui/icons/Cancel'
-import { Controller, FieldError } from 'react-hook-form'
+import { Controller, DeepMap, DeepPartial, FieldError } from 'react-hook-form'
 import { Chip, FormControl, FormHelperText, InputLabel, MenuItem, Select, SelectProps } from '@material-ui/core'
 
 export type MultiSelectElementProps = Omit<SelectProps, 'value'> & {
@@ -12,7 +12,7 @@ export type MultiSelectElementProps = Omit<SelectProps, 'value'> & {
   required?: boolean
   validation?: any
   name: string
-  parseError?: (error: FieldError) => string
+  parseError?: (error: FieldError | DeepMap<DeepPartial<any>, FieldError> | undefined) => string
   minWidth?: number
   menuMaxHeight?: number
   menuMaxWidth?: number

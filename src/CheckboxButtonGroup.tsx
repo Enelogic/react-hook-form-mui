@@ -10,7 +10,7 @@ import {
   FormHelperText,
   FormLabel
 } from '@material-ui/core'
-import { FieldError, useController } from 'react-hook-form'
+import { DeepMap, DeepPartial, FieldError, useController } from 'react-hook-form'
 
 const useStyles = makeStyles({
   root: {
@@ -23,7 +23,7 @@ export type CheckboxButtonGroupProps = {
   helperText?: string
   name: string
   required?: boolean
-  parseError?: (error: FieldError) => string
+  parseError?: (error: FieldError | DeepMap<DeepPartial<any>, FieldError> | undefined) => string
   label?: string
   labelKey?: string
   valueKey?: string

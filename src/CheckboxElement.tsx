@@ -1,12 +1,12 @@
 import React from 'react'
 import { red } from '@material-ui/core/colors'
-import { Controller, ControllerProps, FieldError } from 'react-hook-form'
+import { Controller, ControllerProps, DeepMap, DeepPartial, FieldError } from 'react-hook-form'
 import { Checkbox, CheckboxProps, FormControl, FormControlLabel, FormGroup, FormHelperText } from '@material-ui/core'
 
 export type CheckboxElementProps = Omit<CheckboxProps, 'name'> & {
   validation?: ControllerProps['rules']
   name: string
-  parseError?: (error: FieldError) => string
+  parseError?: (error: FieldError | DeepMap<DeepPartial<any>, FieldError> | undefined) => string
   label?: React.ReactNode
   helperText?: string
 }

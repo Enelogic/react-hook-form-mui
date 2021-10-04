@@ -1,12 +1,12 @@
 import { TextField, TextFieldProps } from '@material-ui/core'
-import { Controller, ControllerProps, FieldError } from 'react-hook-form'
+import { Controller, ControllerProps, DeepMap, DeepPartial, FieldError } from 'react-hook-form'
 import React from 'react'
 
 export type TextFieldElementProps = Omit<TextFieldProps,
   'name'> & {
   validation?: ControllerProps['rules']
   name: string
-  parseError?: (error: FieldError) => string
+  parseError?: (error: FieldError | DeepMap<DeepPartial<any>, FieldError> | undefined) => string
 }
 
 export default function TextFieldElement({

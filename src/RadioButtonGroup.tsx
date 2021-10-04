@@ -1,7 +1,7 @@
 import React, { ChangeEvent } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { red } from '@material-ui/core/colors'
-import { FieldError, useController } from 'react-hook-form'
+import { DeepMap, DeepPartial, FieldError, useController } from 'react-hook-form'
 import {
   FormControl,
   FormControlLabel,
@@ -23,7 +23,7 @@ export type RadioButtonGroupProps = {
   helperText?: string
   name: string
   required?: boolean
-  parseError?: (error: FieldError) => string
+  parseError?: (error: FieldError | DeepMap<DeepPartial<any>, FieldError> | undefined) => string
   label?: string
   labelKey?: string
   valueKey?: string

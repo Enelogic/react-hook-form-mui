@@ -1,6 +1,6 @@
 import React, { createElement } from 'react'
 import { MenuItem, TextField, TextFieldProps } from '@material-ui/core'
-import { Controller, ControllerProps, FieldError } from 'react-hook-form'
+import { Controller, ControllerProps, DeepMap, DeepPartial, FieldError } from 'react-hook-form'
 
 export type SelectElementProps = Omit<TextFieldProps, 'name' | 'type' | 'onChange'> & {
   validation?: ControllerProps['rules']
@@ -9,7 +9,7 @@ export type SelectElementProps = Omit<TextFieldProps, 'name' | 'type' | 'onChang
   valueKey?: string
   labelKey?: string
   type?: 'string' | 'number'
-  parseError?: (error: FieldError) => string
+  parseError?: (error: FieldError | DeepMap<DeepPartial<any>, FieldError> | undefined) => string
   objectOnChange?: boolean
   onChange?: (value: any) => void
 }

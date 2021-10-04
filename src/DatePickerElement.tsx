@@ -1,6 +1,6 @@
 import React from 'react'
 import { DatePicker, DatePickerProps } from '@material-ui/pickers'
-import { Controller, ControllerProps, FieldError } from 'react-hook-form'
+import { Controller, ControllerProps, DeepMap, DeepPartial, FieldError } from 'react-hook-form'
 import { MaterialUiPickersDate } from '@material-ui/pickers/typings/date'
 
 
@@ -8,7 +8,7 @@ export type DatePickerElementProps = Omit<DatePickerProps, 'value' | 'onChange'>
   name: string
   required?: boolean
   isDate?: boolean
-  parseError?: (error: FieldError) => string
+  parseError?: (error: FieldError | DeepMap<DeepPartial<any>, FieldError> | undefined) => string
   onChange?: (value?: string | Date | MaterialUiPickersDate) => void
   validation?: ControllerProps['rules']
   parseDate?: (date: MaterialUiPickersDate) => string
