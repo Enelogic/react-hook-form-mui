@@ -1,5 +1,5 @@
 import React from 'react'
-import CloseIcon from '@material-ui/icons/Cancel'
+import CloseIcon from '@mui/icons-material/Close'
 import { Controller, DeepMap, DeepPartial, FieldError } from 'react-hook-form'
 import { Chip, FormControl, FormHelperText, InputLabel, MenuItem, Select, SelectProps } from '@material-ui/core'
 

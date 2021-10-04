@@ -1,6 +1,6 @@
 import React, { ChangeEvent } from 'react'
-import { makeStyles } from '@material-ui/core/styles'
-import { red } from '@material-ui/core/colors'
+import { makeStyles } from '@mui/material/styles'
+import { red } from '@mui/material/colors'
 import { DeepMap, DeepPartial, FieldError, useController } from 'react-hook-form'
 import {
   FormControl,
@@ -10,9 +10,9 @@ import {
   Radio,
   RadioGroup,
   RadioProps
-} from '@material-ui/core'
+} from '@mui/material'
 
-const useStyles = makeStyles({
+const useStyles: any = makeStyles({
   root: {
     color: red[400]
   }

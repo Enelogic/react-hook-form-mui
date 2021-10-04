@@ -16,8 +16,8 @@ export type { SelectElementProps } from './SelectElement'
 export { default as CheckboxButtonGroup } from './CheckboxButtonGroup'
 export type { CheckboxButtonGroupProps } from './CheckboxButtonGroup'
 
-export { default as MultiSelectElement } from './MultiSelectElement'
-export type { MultiSelectElementProps } from './MultiSelectElement'
+// export { default as MultiSelectElement } from './MultiSelectElement'
+// export type { MultiSelectElementProps } from './MultiSelectElement'
 
 export { default as PasswordElement } from './PasswordElement'
 export type { PasswordElementProps } from './PasswordElement'
